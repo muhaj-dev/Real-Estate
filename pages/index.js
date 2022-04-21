@@ -8,13 +8,13 @@ import Property from '../components/Property';
 
 const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText,linkName, imageUrl }) => (
   <Container > 
-      <Row className='d-flex  justify-content-center align-middle py-2' md="auto">
+      <Row className='d-flex  justify-content-center align-middle my-4' md="auto">
         <Image src={imageUrl} width={500} height={300} alt="banner" />
         <Col className='p-3 '>
-          <div className=' fs-5 fw-normal text-gray-500'>{purpose}</div>
-          <div className='fs-6 fw-bold py-1'>{title1}<br />{title2}</div>
+          <div className=' fs-6 fw-normal text-gray-500'>{purpose}</div>
+          <div className='fs-3 fw-bold py-1'>{title1}<br />{title2}</div>
           <div className='py-2 fs-6 fw-normal text-gray-700'>{desc1}<br/>{desc2}</div>
-          <Button className='fs-6 btn-outline-dark btn-light shadow-sm' href={linkName}>
+          <Button className='fs-6 fw-bold btn-outline-dark btn-light shadow-sm' href={linkName}>
             {buttonText}
           </Button>
         </Col>
@@ -50,9 +50,9 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008'
       />
       {/* fetch the properties and map over them...*/}
-      {propertiesForSale.map((property) => <Property  property={property} key={property.id} />)}
-
-
+      <Row>
+        {propertiesForSale.map((property) => <Property  property={property} key={property.id} />)}
+      </Row>
     </Container>
   )
 }
