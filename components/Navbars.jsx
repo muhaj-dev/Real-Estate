@@ -9,7 +9,7 @@ import { FiKey } from 'react-icons/fi';
 
 const Navbars = () => (
     <Navbar bg="white" className="p-3 mb-5 border-bottom" expand="">
-        <Container>
+        <Container fluid>
             <Navbar.Brand href="/" className='fs-3 fw-bold text-primary'>Muhaj</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
