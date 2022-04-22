@@ -1,5 +1,5 @@
 
-// import Link from "next/link";
+import Link from "next/link";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav, Row } from 'react-bootstrap';
 
@@ -16,10 +16,18 @@ const Navbars = () => (
             <br />
             <Row  className='d-flex p-2 justify-content-end'>
             <Nav style={{ width: '200px' }}>
-                <Nav.Link href="/" passHref><FcHome className='me-2' /> Home</Nav.Link>
-                <Nav.Link href="/search" passHref><BsSearch className='me-2'/> Search</Nav.Link>
-                <Nav.Link href="/search?purpose=for-sale" passHref><FcAbout className='me-2' /> Buy Property</Nav.Link>
-                <Nav.Link href="/search?purpose=for-rent" passHref><FiKey className='me-2' /> Rent Property</Nav.Link>
+                <Link href='/'>
+                    <Nav.Link href='/' passHref><FcHome className='me-2' /> Home</Nav.Link>
+                </Link>
+                <Link href='/search'>
+                    <Nav.Link href="/search" passHref><BsSearch className='me-2'/> Search</Nav.Link>
+                </Link>
+                <Link href="/search?purpose=for-sale">
+                    <Nav.Link href="/search?purpose=for-sale" passHref><FcAbout className='me-2' /> Buy Property</Nav.Link>
+                </Link>
+                <Link href="/search?purpose=for-rent">
+                    <Nav.Link href="/search?purpose=for-rent" passHref><FiKey className='me-2' /> Rent Property</Nav.Link>
+                </Link>
             </Nav>
             </Row>
            

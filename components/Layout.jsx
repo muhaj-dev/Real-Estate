@@ -9,7 +9,7 @@ const Layout = ({ children }) => (
         <Head>
             <title>Real Estate</title>
         </Head>
-        <Container style={{ MaxWidth: '1280px', margin: '0' }}>
+        <Container style={{ MaxWidth: '1280px', margin: '0', margin: 'auto' }}>
             <header>
                 <Navbars />
             </header>
