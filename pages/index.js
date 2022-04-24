@@ -8,7 +8,7 @@ import Property from '../components/Property';
 
 const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText,linkName, imageUrl }) => (
   <Container > 
-      <Row className='d-flex  justify-content-center align-middle my-4' md="auto">
+      <Row className='d-flex flex-wrap justify-content-center align-middle my-4' md="auto">
         <Image src={imageUrl} width={500} height={300} alt="banner" />
         <Col className='p-3 '>
           <div className=' fs-6 fw-normal text-gray-500'>{purpose}</div>

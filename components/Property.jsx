@@ -16,9 +16,9 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
             <span class="align-middle me-1 ">{isVerified && <GoVerified />}</span>
             <span class="align-middle me-1 ">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</span>
           </Col>
-          <img alt="100x100" className="rounded-circle" width="100" height='50'  src={agency?.logo?.url} data-holder-rendered="true"></img>
+          <img alt="100x100"  width="100" height='40'  src={agency?.logo?.url} data-holder-rendered="true"></img>
         </Card.Body>
-        <Card.Title className='align-middle p-0 d-flex justify-content-start text-primary'>
+        <Card.Title className='align-middle p-0 d-flex flex-wrap justify-content-start text-primary'>
           {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
         </Card.Title>
         <Card.Text className='fs-5'>

@@ -14,7 +14,7 @@ const Navbars = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <br />
-            <Row  className='d-flex p-2 justify-content-end'>
+            <Row  className='d-flex flex-wrap p-2 justify-content-end'>
             <Nav style={{ width: '200px' }}>
                 <Link href='/'>
                     <Nav.Link href='/' passHref><FcHome className='me-2' /> Home</Nav.Link>
