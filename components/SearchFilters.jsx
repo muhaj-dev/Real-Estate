@@ -14,16 +14,21 @@ const SearchFilters = () => {
     }
 
     return (
-        <Row className='bg-light d-flex gy-2 flex-wrap p-4  align-items-center justify-content-center'> 
+        <Row className='bg-light d-flex gy-3 flex-wrap p-5  align-items-center justify-content-center'> 
             {filters.map((filter) => (
                 <Form.Group key={filter.queryName} as={Col} className="col-auto">
                 <Form.Select 
-                className="p-2"
+                className="p-2 pe-5"
                 defaultValue={filter.placeholder}
-                controlId="formGridState"
+                // controlId="formGridState"
                 onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder}
                 >
-                
+                <option>{filter.placeholder}</option>
+                {filter?.items.map((item) => (
+                    <option value={item.value} key={item.value}>
+                        {item.name}
+                    </option>
+                ))}
                 </Form.Select>
              </Form.Group> 
             ))}
