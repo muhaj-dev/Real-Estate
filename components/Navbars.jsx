@@ -16,17 +16,17 @@ const Navbars = () => (
             <br />
             <Row  className='d-flex flex-wrap p-2 justify-content-end'>
             <Nav style={{ width: '200px' }}>
-                <Link href='/'>
-                    <Nav.Link href='/' passHref><FcHome className='me-2' /> Home</Nav.Link>
+                <Link href='/'passHref>
+                    <Nav.Link href='/' ><FcHome className='me-2' /> Home</Nav.Link>
                 </Link>
-                <Link href='/search'>
-                    <Nav.Link href="/search" passHref><BsSearch className='me-2'/> Search</Nav.Link>
+                <Link href='/search'passHref>
+                    <Nav.Link href="/search" ><BsSearch className='me-2'/> Search</Nav.Link>
                 </Link>
-                <Link href="/search?purpose=for-sale">
-                    <Nav.Link href="/search?purpose=for-sale" passHref><FcAbout className='me-2' /> Buy Property</Nav.Link>
+                <Link href="/search?purpose=for-sale" passHref>
+                    <Nav.Link href="/search?purpose=for-sale" ><FcAbout className='me-2' /> Buy Property</Nav.Link>
                 </Link>
-                <Link href="/search?purpose=for-rent">
-                    <Nav.Link href="/search?purpose=for-rent" passHref><FiKey className='me-2' /> Rent Property</Nav.Link>
+                <Link href="/search?purpose=for-rent" passHref>
+                    <Nav.Link href="/search?purpose=for-rent" ><FiKey className='me-2' /> Rent Property</Nav.Link>
                 </Link>
             </Nav>
             </Row>
