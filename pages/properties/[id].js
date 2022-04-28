@@ -5,11 +5,13 @@ import { BsGridFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
 
+import ImageScrollbar from "../component/ImageScrollbar"
 import { fetchApi, baseUrl } from '../../utils/fetchApi';
+import { Component } from 'react';
 
 const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => (
     <Container fluid="lg">
-        {photos && <ImageSrollbar data={photos} />}
+        {photos && <ImageScrollbar data={photos} />}
     </Container>
 );
 
