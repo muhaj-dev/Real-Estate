@@ -42,8 +42,7 @@ const RightArrow = () => {
     )
 }
 
-export default function ImageSrollbar({ data }) {
-    return (
+const ImageSrollbar = ({ data }) = (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{overflow: "hidden"}} >
         {data.map((item) => (
             <Row className="p-1 overflow-hidden" style={{width: '910px'}} itemId={item.id}>
@@ -57,8 +56,9 @@ export default function ImageSrollbar({ data }) {
         ))}
     </ScrollMenu>
     );
-}
 
+
+export default ImageSrollbar;
 
 //   export default function ImageSrollbar({ data }) {
 //     return (
