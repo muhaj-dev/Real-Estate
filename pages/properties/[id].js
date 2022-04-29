@@ -12,6 +12,7 @@ const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title
     <Container fluid="lg">
         {photos && <ImageSrollbar data={photos}/>}
     </Container>
+    
 );
 
 export default PropertyDetails;
