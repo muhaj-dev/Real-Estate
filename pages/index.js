@@ -7,7 +7,7 @@ import { fetchApi, baseUrl } from '../utils/fetchApi';
 import Property from '../components/Property';
 
 const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText,linkName, imageUrl }) => (
-  <Container > 
+  <Container fluid="lg"> 
       <Row className='d-flex flex-wrap justify-content-center align-middle my-4' md="auto">
         <Image src={imageUrl} width={500} height={300} alt="banner" />
         <Col className='p-3 '>
@@ -25,7 +25,7 @@ const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText,linkName, im
 export default function Home({ propertiesForSale, propertiesForRent }) {
   console.log(propertiesForRent, propertiesForSale)
   return (
-    <Container >
+    <Container fluid="lg">
       <Banner 
         purpose="RENT A HOME"
         title1="Rental Homes for"

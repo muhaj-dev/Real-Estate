@@ -10,11 +10,11 @@ import millify from 'millify';
 const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID } }) => (
     <Link href={`/property/${externalID}`} passHref>
       <Card style={{ width: '420px', cursor: 'pointer' }} className="m-1 mb-4 border-0 justify-content-flex-start">
-        <Card.Img  src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} alt="house" />
+        <Image  src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} alt="house" />
         <Card.Body style={{ flex: '0'}} className='m-0 p-0 align-middle d-flex justify-content-around'>
           <Col className='d.flex'>
-            <span class="align-middle me-1 ">{isVerified && <GoVerified />}</span>
-            <span class="align-middle me-1 ">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</span>
+            <span className="align-middle me-1 ">{isVerified && <GoVerified />}</span>
+            <span className="align-middle me-1 ">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</span>
           </Col>
           <img alt="100x100"  width="100" height='40'  src={agency?.logo?.url} data-holder-rendered="true"></img>
         </Card.Body>
