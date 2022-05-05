@@ -47,7 +47,6 @@ const SearchFilters = () => {
                 <Form.Select 
                 className="p-2 pe-5"
                 defaultValue={filter.placeholder}
-                // controlId="formGridState"
                 onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder}
                 >
                 <option>{filter.placeholder}</option>
