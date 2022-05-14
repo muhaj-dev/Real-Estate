@@ -36,10 +36,13 @@ const Search = ({ properties }) => {
             <Row>
                 {properties.map((property) => <Property property={property} key={property.id}/> )}
             </Row>
+            
+        {properties.length === 0 && (
             <Row className="justify-content-center align-middle flex-column mt-5 mb-5">
                 <Image src={noresult} alt='No Result' />
                 <Col  class="text-center fs-2 mt-4">No Result Found.</Col>
             </Row>
+        )}
         </Container>
     )
 }
